@@ -1,0 +1,15 @@
+/* Transitions.module.css */
+.transition {
+    will-change: transform, opacity, height, width;
+}
+
+.collapseContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.collapseContentHorizontal {
+    display: inline-flex;
+    height: 100%;
+}

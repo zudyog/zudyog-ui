@@ -1,0 +1,43 @@
+/* Popper.module.css */
+.popper {
+    @apply bg-white rounded-md shadow-lg p-4 border border-gray-200;
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    overflow: auto;
+    will-change: transform;
+}
+
+.popper[data-placement^='top'] {
+    @apply origin-bottom;
+}
+
+.popper[data-placement^='bottom'] {
+    @apply origin-top;
+}
+
+.popper[data-placement^='left'] {
+    @apply origin-right;
+}
+
+.popper[data-placement^='right'] {
+    @apply origin-left;
+}
+
+/* Animation classes */
+.popper-enter {
+    @apply opacity-0 scale-95;
+}
+
+.popper-enter-active {
+    @apply opacity-100 scale-100;
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.popper-exit {
+    @apply opacity-100 scale-100;
+}
+
+.popper-exit-active {
+    @apply opacity-0 scale-95;
+    transition: opacity 150ms ease-in, transform 150ms ease-in;
+}

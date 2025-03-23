@@ -1,0 +1,92 @@
+/* Slider.module.css */
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 8px 0;
+    touch-action: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #e2e8f0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.filledTrack {
+    position: absolute;
+    height: 100%;
+    background-color: #3b82f6;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+}
+
+.thumb {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 2px solid #3b82f6;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    transition: box-shadow 0.2s;
+    z-index: 1;
+}
+
+.thumb:hover,
+.thumb:focus {
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.thumb.active {
+    cursor: grabbing;
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+.mark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #cbd5e1;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.markLabel {
+    position: absolute;
+    font-size: 12px;
+    color: #64748b;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.disabled .track,
+.disabled .thumb {
+    cursor: not-allowed;
+}
+
+.disabled .filledTrack {
+    background-color: #94a3b8;
+}
+
+.disabled .thumb {
+    border-color: #94a3b8;
+}

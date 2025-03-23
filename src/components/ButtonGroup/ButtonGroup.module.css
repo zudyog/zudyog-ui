@@ -1,0 +1,65 @@
+/* ButtonGroup.module.css */
+.buttonGroup {
+    @apply inline-flex;
+}
+
+.orientation-horizontal {
+    @apply flex-row;
+}
+
+.orientation-horizontal .groupedButton:not(:first-child):not(:last-child) {
+    @apply rounded-none border-l-0;
+}
+
+.orientation-horizontal .groupedButton:first-child {
+    @apply rounded-r-none;
+}
+
+.orientation-horizontal .groupedButton:last-child {
+    @apply rounded-l-none border-l-0;
+}
+
+.orientation-horizontal .groupedButton:not(:first-child) {
+    @apply -ml-px;
+}
+
+.orientation-vertical {
+    @apply flex-col;
+}
+
+.orientation-vertical .groupedButton:not(:first-child):not(:last-child) {
+    @apply rounded-none border-t-0;
+}
+
+.orientation-vertical .groupedButton:first-child {
+    @apply rounded-b-none;
+}
+
+.orientation-vertical .groupedButton:last-child {
+    @apply rounded-t-none border-t-0;
+}
+
+.orientation-vertical .groupedButton:not(:first-child) {
+    @apply -mt-px;
+}
+
+.fullWidth {
+    @apply w-full;
+}
+
+.fullWidth .groupedButton {
+    @apply flex-1;
+}
+
+/* Size variations */
+.buttonGroup .groupedButton[data-size="sm"] {
+    @apply text-xs px-2.5 py-1.5;
+}
+
+.buttonGroup .groupedButton[data-size="md"] {
+    @apply text-sm px-4 py-2;
+}
+
+.buttonGroup .groupedButton[data-size="lg"] {
+    @apply text-base px-5 py-2.5;
+}

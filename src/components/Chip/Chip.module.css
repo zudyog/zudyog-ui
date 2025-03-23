@@ -1,0 +1,52 @@
+/* Chip.module.css */
+.chip {
+    max-width: 100%;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease;
+}
+
+.chip:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+}
+
+.chipLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chipAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chipDelete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.chipDelete:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chipDelete:focus {
+    outline: none;
+}
+
+/* Ensure proper focus styles for keyboard navigation */
+.chip:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.chipDelete:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}

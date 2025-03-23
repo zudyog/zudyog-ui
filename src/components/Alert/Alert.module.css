@@ -1,0 +1,87 @@
+/* Alert.module.css */
+.alert {
+    @apply flex items - start p - 4 mb - 4 rounded - lg border;
+    @apply transition - all duration - 300 ease -in -out;
+}
+
+.success {
+    @apply bg - green - 50 text - green - 800 border - green - 300;
+}
+
+.error {
+    @apply bg - red - 50 text - red - 800 border - red - 300;
+}
+
+.warning {
+    @apply bg - yellow - 50 text - yellow - 800 border - yellow - 300;
+}
+
+.info {
+    @apply bg - blue - 50 text - blue - 800 border - blue - 300;
+}
+
+.iconContainer {
+    @apply flex - shrink - 0 mr - 3;
+}
+
+.icon {
+    @apply h - 5 w - 5;
+}
+
+.content {
+    @apply flex - 1;
+}
+
+.message {
+    @apply text - sm font - medium;
+}
+
+.description {
+    @apply mt - 1 text - sm opacity - 90;
+}
+
+.actions {
+    @apply flex items - center ml - auto pl - 3;
+}
+
+.actionButton {
+    @apply text - sm font - medium underline mr - 3;
+    @apply hover: opacity - 80 focus: outline - none focus: ring - 2 focus: ring - offset - 2 focus: ring - opacity - 50;
+}
+
+.success.actionButton {
+    @apply text - green - 700 focus: ring - green - 500;
+}
+
+.error.actionButton {
+    @apply text - red - 700 focus: ring - red - 500;
+}
+
+.warning.actionButton {
+    @apply text - yellow - 700 focus: ring - yellow - 500;
+}
+
+.info.actionButton {
+    @apply text - blue - 700 focus: ring - blue - 500;
+}
+
+.closeButton {
+    @apply -mr - 1 flex - shrink - 0 p - 0.5 rounded - md;
+    @apply hover: bg - opacity - 10 focus: outline - none focus: ring - 2 focus: ring - offset - 2 focus: ring - opacity - 50;
+}
+
+.success.closeButton {
+    @apply hover: bg - green - 200 focus: ring - green - 500;
+}
+
+.error.closeButton {
+    @apply hover: bg - red - 200 focus: ring - red - 500;
+}
+
+.warning.closeButton {
+    @apply hover: bg - yellow - 200 focus: ring - yellow - 500;
+}
+
+.info.closeButton {
+    @apply hover: bg - blue - 200 focus: ring - blue - 500;
+}

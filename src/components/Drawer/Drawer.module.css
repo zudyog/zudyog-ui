@@ -1,0 +1,89 @@
+/* Drawer.module.css */
+.drawer {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Anchor positions */
+.anchor-left {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.anchor-right {
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+}
+
+.anchor-top {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+.anchor-bottom {
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+/* Open state */
+.open.anchor-left,
+.open.anchor-right,
+.open.anchor-top,
+.open.anchor-bottom,
+.permanent {
+    transform: translateX(0) translateY(0);
+}
+
+/* Permanent variant is always visible */
+.permanent {
+    position: relative;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Backdrop for temporary drawer */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Close button for persistent drawer */
+.closeButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.closeButton:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}

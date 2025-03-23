@@ -1,0 +1,6 @@
+/* Portal.module.css */
+.portal {
+    /* Base styles for the portal container */
+    position: relative;
+    z-index: 50;
+}

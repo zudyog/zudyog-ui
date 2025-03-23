@@ -1,0 +1,133 @@
+/* Button.module.css */
+.button {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+/* Variants */
+.button-contained {
+    @apply text-white shadow hover:shadow-md;
+}
+
+.button-outlined {
+    @apply bg-transparent border;
+}
+
+.button-text {
+    @apply bg-transparent shadow-none;
+}
+
+/* Colors */
+.button-contained.button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.button-contained.button-secondary {
+    @apply bg-purple-600 hover:bg-purple-700 focus:ring-purple-500;
+}
+
+.button-contained.button-success {
+    @apply bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.button-contained.button-error {
+    @apply bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.button-contained.button-warning {
+    @apply bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+.button-contained.button-info {
+    @apply bg-sky-600 hover:bg-sky-700 focus:ring-sky-500;
+}
+
+.button-outlined.button-primary {
+    @apply border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500;
+}
+
+.button-outlined.button-secondary {
+    @apply border-purple-600 text-purple-600 hover:bg-purple-50 focus:ring-purple-500;
+}
+
+.button-outlined.button-success {
+    @apply border-green-600 text-green-600 hover:bg-green-50 focus:ring-green-500;
+}
+
+.button-outlined.button-error {
+    @apply border-red-600 text-red-600 hover:bg-red-50 focus:ring-red-500;
+}
+
+.button-outlined.button-warning {
+    @apply border-yellow-600 text-yellow-600 hover:bg-yellow-50 focus:ring-yellow-500;
+}
+
+.button-outlined.button-info {
+    @apply border-sky-600 text-sky-600 hover:bg-sky-50 focus:ring-sky-500;
+}
+
+.button-text.button-primary {
+    @apply text-blue-600 hover:bg-blue-50 focus:ring-blue-500;
+}
+
+.button-text.button-secondary {
+    @apply text-purple-600 hover:bg-purple-50 focus:ring-purple-500;
+}
+
+.button-text.button-success {
+    @apply text-green-600 hover:bg-green-50 focus:ring-green-500;
+}
+
+.button-text.button-error {
+    @apply text-red-600 hover:bg-red-50 focus:ring-red-500;
+}
+
+.button-text.button-warning {
+    @apply text-yellow-600 hover:bg-yellow-50 focus:ring-yellow-500;
+}
+
+.button-text.button-info {
+    @apply text-sky-600 hover:bg-sky-50 focus:ring-sky-500;
+}
+
+/* Sizes */
+.button-small {
+    @apply px-3 py-1.5 text-sm;
+}
+
+.button-medium {
+    @apply px-4 py-2 text-base;
+}
+
+.button-large {
+    @apply px-6 py-3 text-lg;
+}
+
+/* States */
+.disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
+
+.loading {
+    @apply cursor-wait;
+}
+
+.fullWidth {
+    @apply w-full;
+}
+
+/* Icon positioning */
+.startIcon {
+    @apply -ml-0.5 mr-2 flex-shrink-0;
+}
+
+.endIcon {
+    @apply -mr-0.5 ml-2 flex-shrink-0;
+}
+
+.spinner {
+    @apply inline-flex;
+}
+
+.content {
+    @apply flex-1 text-center;
+}

@@ -1,0 +1,31 @@
+/* Table.module.css */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.stickyHeader thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.stickyHeader th {
+    background-color: #f9fafb;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.stickyFooter tfoot {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+.stickyFooter td {
+    background-color: #f9fafb;
+    box-shadow: 0 - 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive styles */
+/* @media(max-width: 640px) */

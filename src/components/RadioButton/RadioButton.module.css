@@ -1,0 +1,30 @@
+/* RadioButton.module.css */
+.radioInput {
+    @apply absolute opacity-0 cursor-pointer;
+}
+
+.radioControl {
+    @apply rounded-full border-2 border-gray-400 bg-white transition-all duration-200;
+}
+
+.radioInput:checked+.radioControl {
+    @apply border-4 border-primary-500 bg-white;
+    border-color: var(--active-color, theme('colors.primary.500'));
+}
+
+.radioInput:focus+.radioControl {
+    @apply ring-2 ring-offset-2 ring-primary-400;
+    ring-color: var(--active-color, theme('colors.primary.400'));
+}
+
+.radioInput:disabled+.radioControl {
+    @apply bg-gray-100 border-gray-300;
+}
+
+.radioInput:hover:not(:disabled)+.radioControl {
+    @apply border-gray-500;
+}
+
+.radioInput:checked:hover:not(:disabled)+.radioControl {
+    border-color: var(--active-color, theme('colors.primary.600'));
+}

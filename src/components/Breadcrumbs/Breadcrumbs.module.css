@@ -1,0 +1,42 @@
+/* Breadcrumbs.module.css */
+.breadcrumbs {
+    @apply py-2 px-1;
+}
+
+.breadcrumbsList {
+    @apply flex flex-wrap items-center list-none p-0 m-0;
+}
+
+.breadcrumbItem {
+    @apply inline-flex items-center text-sm;
+}
+
+.breadcrumbLink {
+    @apply text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200;
+}
+
+.breadcrumbText {
+    @apply text-gray-700;
+}
+
+.active {
+    @apply font-medium text-gray-900;
+}
+
+.separator {
+    @apply mx-2 text-gray-400;
+}
+
+.collapsed {
+    @apply cursor-pointer text-blue-600 hover:text-blue-800 hover:underline;
+}
+
+@media (max-width: 640px) {
+    .breadcrumbsList {
+        @apply text-xs;
+    }
+
+    .separator {
+        @apply mx-1;
+    }
+}

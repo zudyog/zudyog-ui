@@ -1,0 +1,57 @@
+/* Card.module.css */
+.card {
+    @apply bg-white overflow-hidden flex flex-col;
+}
+
+.cardHeader {
+    @apply px-6 py-4 border-b border-gray-200;
+}
+
+.cardMedia {
+    @apply w-full;
+}
+
+.cardMedia img {
+    @apply w-full h-auto;
+}
+
+.cardContent {
+    @apply px-6 py-4 flex-grow;
+}
+
+.cardActions {
+    @apply px-6 py-4 border-t border-gray-200 flex justify-end space-x-2;
+}
+
+.hoverable {
+    @apply transition-shadow duration-300 ease-in-out;
+}
+
+.hoverable:hover {
+    @apply shadow-lg;
+}
+
+/* Elevation classes */
+.elevation0 {
+    @apply shadow-none;
+}
+
+.elevation1 {
+    @apply shadow-sm;
+}
+
+.elevation2 {
+    @apply shadow;
+}
+
+.elevation3 {
+    @apply shadow-md;
+}
+
+.elevation4 {
+    @apply shadow-lg;
+}
+
+.elevation5 {
+    @apply shadow-xl;
+}

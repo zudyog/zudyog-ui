@@ -1,0 +1,92 @@
+/* Switch.module.css */
+.switchContainer {
+    display: inline - flex;
+    align-items: center;
+    position: relative;
+}
+
+.switchWrapper {
+    position: relative;
+    display: inline - block;
+}
+
+.switchInput {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.switchToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #e2e8f0;
+    border-radius: 9999px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.switchToggle.checked {
+    background-color: #3b82f6;
+}
+
+.switchToggle.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.switchThumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(50% - 2px);
+    height: calc(100% - 4px);
+    border-radius: 50%;
+    transition: 0.2s;
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.switchInput:checked+.switchToggle.switchThumb {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.switchLabel {
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.switchLabel.disabled {
+    cursor: not - allowed;
+    opacity: 0.5;
+}
+
+.labelLeft {
+    margin-right: 0.5rem;
+}
+
+.labelRight {
+    margin-left: 0.5rem;
+}
+
+/* Sizes */
+.switchSm {
+    width: 36px;
+    height: 20px;
+}
+
+.switchMd {
+    width: 44px;
+    height: 24px;
+}
+
+.switchLg {
+    width: 52px;
+    height: 28px;
+}

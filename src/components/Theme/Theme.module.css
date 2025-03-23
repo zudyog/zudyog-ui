@@ -1,0 +1,121 @@
+/* Theme.module.css */
+.themeContainer {
+    /* Base container styles */
+    color: var(--color - text);
+    background-color: var(--color-background);
+    font-size: var(--font-size-base);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.themeControl {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Apply theme variables to common elements */
+:global(.btn) {
+    border-radius: var(--border-radius);
+    padding: calc(0.5rem * var(--spacing-factor)) calc(1rem * var(--spacing-factor));
+}
+
+:global(.btn-primary) {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+:global(.btn-secondary) {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+:global(.card) {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    padding: calc(1rem * var(--spacing - factor));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography classes */
+:global(.text-xs) {
+    font-size: var(--font-size-xs);
+}
+
+:global(.text-sm) {
+    font-size: var(--font-size-sm);
+}
+
+:global(.text-base) {
+    font-size: var(--font-size-base);
+}
+
+:global(.text-lg) {
+    font-size: var(--font-size-lg);
+}
+
+:global(.text-xl) {
+    font-size: var(--font-size-xl);
+}
+
+:global(.text-2xl) {
+    font-size: var(--font-size-2xl);
+}
+
+:global(.text-3xl) {
+    font-size: var(--font-size-3xl);
+}
+
+:global(.text-4xl) {
+    font-size: var(--font-size-4xl);
+}
+
+/* Color utility classes */
+:global(.text-primary) {
+    color: var(--color-primary);
+}
+
+:global(.text-secondary) {
+    color: var(--color-secondary);
+}
+
+:global(.text-accent) {
+    color: var(--color-accent);
+}
+
+:global(.text-error) {
+    color: var(--color-error);
+}
+
+:global(.text-warning) {
+    color: var(--color-warning);
+}
+
+:global(.text-success) {
+    color: var(--color-success);
+}
+
+:global(.bg-primary) {
+    background-color: var(--color-primary);
+}
+
+:global(.bg-secondary) {
+    background-color: var(--color-secondary);
+}
+
+:global(.bg-accent) {
+    background-color: var(--color-accent);
+}
+
+:global(.bg-error) {
+    background-color: var(--color-error);
+}
+
+:global(.bg-warning) {
+    background-color: var(--color-warning);
+}
+
+:global(.bg-success) {
+    background-color: var(--color-success);
+}

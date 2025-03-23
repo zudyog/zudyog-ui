@@ -1,0 +1,49 @@
+/* Pagination.module.css */
+.pagination {
+    @apply flex justify-center items-center;
+}
+
+.paginationList {
+    @apply flex flex-wrap items-center list-none p-0 m-0;
+}
+
+.paginationItem {
+    @apply mx-1;
+}
+
+.paginationButton {
+    @apply flex items-center justify-center rounded-md border border-gray-300 bg-white text-gray-700 transition-colors duration-200 ease-in-out;
+    @apply hover:bg-gray-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.paginationButton.active {
+    @apply bg-blue-600 text-white border-blue-600;
+    @apply hover:bg-blue-700 hover:text-white;
+}
+
+.paginationButton.disabled,
+.disabled .paginationButton {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+    @apply hover:bg-white hover:text-gray-700;
+}
+
+.ellipsis {
+    @apply px-3 py-2 text-gray-500;
+}
+
+/* Size variants */
+.small .paginationButton {
+    @apply text-xs px-2 py-1 min-w-[28px] h-7;
+}
+
+.medium .paginationButton {
+    @apply text-sm px-3 py-2 min-w-[36px] h-9;
+}
+
+.large .paginationButton {
+    @apply text-base px-4 py-2 min-w-[44px] h-11;
+}
+
+.disabled {
+    @apply opacity-60 cursor-not-allowed;
+}

@@ -1,0 +1,11 @@
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordionContent.expanded {
+    max-height: 1000px;
+    /* Arbitrary large value, will animate to actual height */
+    transition: max-height 0.5s ease-in;
+}

@@ -1,0 +1,192 @@
+/* Stepper.module.css */
+.stepper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.stepContainer {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.horizontal .stepContainer {
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical .stepContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.step {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+/* Label placement variations */
+.stepper[data-orientation="horizontal"][data-label-placement="bottom"] .step {
+    flex-direction: column;
+    align-items: center;
+}
+
+.stepper[data-orientation="horizontal"][data-label-placement="top"] .step {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.stepper[data-orientation="vertical"][data-label-placement="right"] .step {
+    flex-direction: row;
+    align-items: center;
+}
+
+.stepper[data-orientation="vertical"][data-label-placement="left"] .step {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.stepIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+.stepContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.stepLabel {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.stepDescription {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+/* Connector styles */
+.connector {
+    flex: 1;
+    transition: background-color 0.2s ease;
+}
+
+.horizontal .connector {
+    height: 2px;
+    margin: 0 -1px;
+    position: relative;
+    top: 1rem;
+}
+
+.vertical .connector {
+    width: 2px;
+    margin: -1px 0;
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    bottom: -1.5rem;
+}
+
+/* Step states */
+.pending {
+    background-color: #e5e7eb;
+    color: #6b7280;
+    border: 2px solid #e5e7eb;
+}
+
+.active {
+    background-color: #ffffff;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.completed {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: 2px solid #3b82f6;
+}
+
+.error {
+    background-color: #ffffff;
+    color: #ef4444;
+    border: 2px solid #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Connector states */
+.connectorPending {
+    background-color: #e5e7eb;
+}
+
+.connectorCompleted {
+    background-color: #3b82f6;
+}
+
+/* Clickable steps */
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover .stepIndicator {
+    transform: scale(1.05);
+}
+
+/* Check icon */
+.checkIcon {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .horizontal {
+        flex-direction: column;
+    }
+
+    .horizontal .stepContainer {
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+
+    .horizontal .connector {
+        width: 2px;
+        height: auto;
+        margin: -1px 0;
+        position: absolute;
+        left: 1rem;
+        top: 2rem;
+        bottom: -1rem;
+    }
+
+    .stepper[data-orientation="horizontal"][data-label-placement="bottom"] .step,
+    .stepper[data-orientation="horizontal"][data-label-placement="top"] .step {
+        flex-direction: row;
+        align-items: center;
+    }
+}

@@ -1,0 +1,36 @@
+/* Snackbar.module.css */
+.snackbarEnter {
+    animation: slideIn 0.3s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.snackbarExit {
+    animation: slideOut 0.3s ease forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

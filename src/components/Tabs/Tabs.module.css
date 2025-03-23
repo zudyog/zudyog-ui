@@ -1,0 +1,112 @@
+/* Tabs.module.css */
+.tabsContainer {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tabsContainer[data-centered="true"] .tabsList {
+    justify-content: center;
+}
+
+.tabsContainer[data-scrollable="true"] .tabsScroller {
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.tabsContainer[data-scrollable="true"] .tabsScroller::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.tabsScroller {
+    overflow: hidden;
+    width: 100%;
+}
+
+.tabsList {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: min-content;
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    outline: none;
+}
+
+.tab:hover:not(.disabledTab) {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.activeTab {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.disabledTab {
+    color: rgba(0, 0, 0, 0.38);
+    pointer-events: none;
+    cursor: default;
+}
+
+.tabIcon {
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tabLabel {
+    display: inline-block;
+}
+
+.activeIndicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #1976d2;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .tab {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .tab:hover:not(.disabledTab) {
+        color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .activeTab {
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .disabledTab {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .activeIndicator {
+        background-color: #90caf9;
+    }
+
+    .tabsContainer {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+}

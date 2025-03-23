@@ -1,0 +1,120 @@
+/* Divider.module.css */
+.divider {
+    --divider-color: currentColor;
+    --divider-thickness: 1px;
+    --divider-spacing: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+/* Orientation styles */
+.horizontal {
+    width: 100%;
+    margin: var(--divider-spacing) 0;
+    flex-direction: row;
+}
+
+.vertical {
+    height: 100%;
+    margin: 0 var(--divider-spacing);
+    flex-direction: column;
+    min-height: 1.5rem;
+}
+
+/* Variant styles */
+.solid {
+    border-style: solid;
+}
+
+.dashed {
+    border-style: dashed;
+}
+
+.dotted {
+    border-style: dotted;
+}
+
+/* Line styles based on orientation */
+.horizontal:not(.withText) {
+    border-bottom-width: var(--divider-thickness);
+    border-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+.vertical:not(.withText) {
+    border-left-width: var(--divider-thickness);
+    border-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+/* Divider with text */
+.withText {
+    border: none;
+    justify-content: center;
+}
+
+.withText .line {
+    flex-grow: 1;
+}
+
+.horizontal .line {
+    height: var(--divider-thickness);
+    background-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+.vertical .line {
+    width: var(--divider-thickness);
+    background-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+.horizontal.solid .line {
+    background-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+.horizontal.dashed .line {
+    background: repeating-linear-gradient(to right,
+            var(--divider-color, rgba(0, 0, 0, 0.12)),
+            var(--divider-color, rgba(0, 0, 0, 0.12)) 5px,
+            transparent 5px,
+            transparent 8px);
+}
+
+.horizontal.dotted .line {
+    background: repeating-linear-gradient(to right,
+            var(--divider-color, rgba(0, 0, 0, 0.12)),
+            var(--divider-color, rgba(0, 0, 0, 0.12)) 1px,
+            transparent 1px,
+            transparent 4px);
+}
+
+.vertical.solid .line {
+    background-color: var(--divider-color, rgba(0, 0, 0, 0.12));
+}
+
+.vertical.dashed .line {
+    background: repeating-linear-gradient(to bottom,
+            var(--divider-color, rgba(0, 0, 0, 0.12)),
+            var(--divider-color, rgba(0, 0, 0, 0.12)) 5px,
+            transparent 5px,
+            transparent 8px);
+}
+
+.vertical.dotted .line {
+    background: repeating-linear-gradient(to bottom,
+            var(--divider-color, rgba(0, 0, 0, 0.12)),
+            var(--divider-color, rgba(0, 0, 0, 0.12)) 1px,
+            transparent 1px,
+            transparent 4px);
+}
+
+.text {
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+    color: var(--divider-color, rgba(0, 0, 0, 0.6));
+    white-space: nowrap;
+}
+
+.vertical .text {
+    padding: 0.75rem 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,132 @@
+/* Typography.module.css */
+.typography {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variants */
+.h1 {
+    @apply text-4xl font-bold;
+}
+
+.h2 {
+    @apply text-3xl font-bold;
+}
+
+.h3 {
+    @apply text-2xl font-bold;
+}
+
+.h4 {
+    @apply text-xl font-semibold;
+}
+
+.h5 {
+    @apply text-lg font-semibold;
+}
+
+.h6 {
+    @apply text-base font-semibold;
+}
+
+.subtitle1 {
+    @apply text-lg font-medium;
+}
+
+.subtitle2 {
+    @apply text-base font-medium;
+}
+
+.body1 {
+    @apply text-base font-normal;
+}
+
+.body2 {
+    @apply text-sm font-normal;
+}
+
+.caption {
+    @apply text-xs font-normal;
+}
+
+.overline {
+    @apply text-xs font-medium uppercase tracking-wider;
+}
+
+/* Alignment */
+.align-left {
+    @apply text-left;
+}
+
+.align-center {
+    @apply text-center;
+}
+
+.align-right {
+    @apply text-right;
+}
+
+.align-justify {
+    @apply text-justify;
+}
+
+/* Font weights */
+.weight-normal {
+    @apply font-normal;
+}
+
+.weight-medium {
+    @apply font-medium;
+}
+
+.weight-semibold {
+    @apply font-semibold;
+}
+
+.weight-bold {
+    @apply font-bold;
+}
+
+/* Spacing */
+.gutterBottom {
+    @apply mb-2;
+}
+
+/* Truncation */
+.truncate {
+    @apply truncate;
+}
+
+/* Responsive sizing */
+.responsive {
+    @apply md:text-[105%] lg:text-[110%];
+}
+
+/* Responsive variants */
+@media (min-width: 768px) {
+    .responsive.h1 {
+        @apply text-5xl;
+    }
+
+    .responsive.h2 {
+        @apply text-4xl;
+    }
+
+    .responsive.h3 {
+        @apply text-3xl;
+    }
+}
+
+@media (min-width: 1024px) {
+    .responsive.h1 {
+        @apply text-6xl;
+    }
+
+    .responsive.h2 {
+        @apply text-5xl;
+    }
+
+    .responsive.h3 {
+        @apply text-4xl;
+    }
+}

@@ -1,0 +1,43 @@
+/* Progress.module.css */
+.linearIndeterminate {
+    animation: linearProgress 1.5s infinite ease-in-out;
+    width: 30%;
+}
+
+.circularRotate {
+    animation: rotate 2s linear infinite;
+}
+
+.circularIndeterminate {
+    animation: circularDash 1.5s ease-in-out infinite;
+}
+
+@keyframes linearProgress {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(400%);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circularDash {
+    0% {
+        stroke-dashoffset: 280;
+    }
+
+    50% {
+        stroke-dashoffset: 75;
+    }
+
+    100% {
+        stroke-dashoffset: 280;
+    }
+}

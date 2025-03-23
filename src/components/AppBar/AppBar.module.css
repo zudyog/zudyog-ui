@@ -1,0 +1,33 @@
+/* AppBar.module.css */
+.appBar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.scrolled {
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 640px) {
+    .appBar {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Animation for scroll transformation */
+@keyframes shrinkAppBar {
+    from {
+        height: var(--initial-height);
+    }
+
+    to {
+        height: var(--scrolled-height);
+    }
+}
+
+.appBar.scrolled:not(.noTransform) {
+    --initial-height: 64px;
+    --scrolled-height: 56px;
+    animation: shrinkAppBar 0.3s forwards;
+}

@@ -1,0 +1,125 @@
+/* Stack.module.css */
+.stack {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.stack-horizontal {
+    flex-direction: row;
+}
+
+.stack-vertical {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.fullSize {
+    width: 100%;
+    height: 100%;
+}
+
+/* Spacing variants */
+.spacing-none>.stackItem:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.spacing-xs.stack-horizontal>.stackItem:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.spacing-xs.stack-vertical>.stackItem:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+.spacing-sm.stack-horizontal>.stackItem:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.spacing-sm.stack-vertical>.stackItem:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.spacing-md.stack-horizontal>.stackItem:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.spacing-md.stack-vertical>.stackItem:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.spacing-lg.stack-horizontal>.stackItem:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.spacing-lg.stack-vertical>.stackItem:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.spacing-xl.stack-horizontal>.stackItem:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.spacing-xl.stack-vertical>.stackItem:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* Alignment variants */
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+/* Dividers */
+.divider {
+    background-color: #e2e8f0;
+}
+
+.dividerHorizontal {
+    height: 1px;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.dividerVertical {
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+    margin: 0 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .stack-horizontal.stack-responsive {
+        flex-direction: column;
+    }
+
+    .stack-horizontal.stack-responsive>.stackItem:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .stack-horizontal.stack-responsive .dividerVertical {
+        width: 100%;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+}
+
+.stackItem {
+    min-width: 0;
+}

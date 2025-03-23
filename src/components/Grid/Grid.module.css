@@ -1,0 +1,29 @@
+/* Grid.module.css */
+.grid {
+    display: grid;
+}
+
+/* Add any additional custom styles that can't be handled by Tailwind here */
+@media (hover: hover) {
+    .grid:hover {
+        /* Custom hover styles if needed */
+    }
+}
+
+/* You can add custom animations or transitions here */
+.grid.animate {
+    transition: all 0.3s ease;
+}
+
+/* Add any utility classes that extend Tailwind's functionality */
+.grid.autoRows {
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.grid.autoFit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid.autoFill {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
